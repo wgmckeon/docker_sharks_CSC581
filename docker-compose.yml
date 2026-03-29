@@ -1,0 +1,17 @@
+
+services:
+
+  app:
+    build: ./app              
+    container_name: shark_app
+    ports:
+      - "8080:8080"         
+    depends_on:
+      - mongo                 
+    restart: on-failure       
+
+  mongo:
+    image: mongo
+    container_name: shark_db
+    ports:
+      - "27017:27017"
