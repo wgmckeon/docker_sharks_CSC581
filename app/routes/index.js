@@ -7,9 +7,8 @@ router.use(function (req, res, next) {
     next();
 });
 
-// GET / — serve the landing page
 router.get('/', function (req, res) {
-    res.sendFile(path.resolve('views/index.html')); // Fixed: was 're.sendFile'
+    res.sendFile(path.resolve('views/index.html')); 
 });
 
 module.exports = router;
